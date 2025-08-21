@@ -1,0 +1,45 @@
+:root {
+    --azul: rgb(55, 48, 75);
+}
+
+
+
+.main-content {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+
+
+table,
+th,
+td {}
+
+table {
+    border-radius: 1px;
+    max-width: 1000px;
+}
+
+.title-divisor {
+
+    background-color: var(--azul);
+}
+
+.table-title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.table-info {
+    padding: 10px;
+}
+
+.table-heading {
+    padding: 10px;
+}
+
+/* imagen de la tabla */
+.table-image {
+    width: 1000px;
+}

@@ -1,0 +1,126 @@
+:root {
+    --color-black: #222222;
+    --color-f1: #e10600;
+    --color-white: #ffffff;
+    --formula-1-font: "Orbitron", sans-serif
+}
+
+.header {
+
+    background-color: var(--color-black);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar__logo {
+    width: 5rem;
+}
+
+
+
+.hover-underline a {
+    position: relative;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 400;
+    padding: 5px 0;
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hover-underline a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-f1);
+    transition: width 0.3s ease;
+}
+
+.hover-underline a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-f1);
+    transition: width 0.3s ease;
+}
+
+.hover-underline a:hover::before {
+    width: 100%;
+}
+
+.hover-underline a:hover::after {
+    width: 100%;
+}
+
+.hover-underline a.active-link::before,
+.hover-underline a.active-link::after {
+    width: 100%;
+}
+
+.banner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 50%;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/banner.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.gp-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    color: var(--color-black);
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.gp-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gp-date {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.gp-flag {
+    width: 32px;
+    height: auto;
+}
+
+.gp-sponsor img {
+    height: 40px;
+
+}
